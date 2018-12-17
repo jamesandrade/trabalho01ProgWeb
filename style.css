@@ -1,0 +1,206 @@
+body{
+	 background-image: url("fundo.png");
+	 background-repeat: no-repeat;
+	 background-size:cover;
+	 
+}
+
+*{
+	margin:0;
+	padding: 0;
+	
+}
+
+.menu{
+	width: 100%;
+	height: 50px;
+	background-color: #222;
+	font-family: 'arial';
+}
+
+.menu ul{
+	list-style: none;
+	position: relative;
+}
+
+.menu ul li{
+	width: 150px;
+	float: left;
+}
+
+.menu a{
+	padding: 15px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background-color: #222;
+	color: #fff;
+}
+
+.menu ul ul{
+	position: absolute;
+	visibility: hidden;
+}
+
+.menu ul li:hover ul{
+	visibility: visible;
+}
+
+.menu a:hover{
+	background-color: #f4f4f4;
+	color: #555;
+}
+
+.menu ul ul li{
+	float: none;
+	border-bottom: solid 1px #ccc;
+}
+
+.menu ul ul li a{
+	background-color: #069;
+}
+
+label[for="bt_menu"]{
+	padding: 5px;
+	background-color: #222;
+	color: #fff;
+	font-family: 'Arial';
+	text-align: center;
+	font-size: 30px;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	
+}
+
+#bt_menu{
+	display: none;
+}
+
+label[for="bt_menu"]{
+	display: none;
+}
+
+@media(max-width: 800px){
+label[for="bt_menu"]{
+	display: block;
+}
+	.menu{
+		margin-top: 5px;
+		margin-left: -100%;
+		transition: all .4s;
+	}
+	
+	#bt_menu:checked ~ .menu{
+		margin-left:0;
+	}
+	.menu ul li{
+		width: 100%;
+		float: none;
+		
+	}
+	
+	.menu ul ul{
+		position: static;
+		overflow: hidden;
+		max-height: 0;
+		transition: all .4s;
+	}
+	
+	.menu ul li:hover ul{
+		height: auto;
+		max-height: 200px;
+	}
+}
+
+.conteudo{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.conteudo img{
+	margin-top: 12px;
+	max-width: 80%;
+		animation-name: example;
+    animation-duration: 4s;
+
+}
+@keyframes example {
+       from {
+         opacity: 0;
+         transform: translate3d(0, -100%, 0);
+       }
+       to {
+         opacity: 1;
+         transform: none;
+       }
+    }
+
+@keyframes example2 {
+       from {
+         opacity: 0;
+         transform: translate3d(-100%, 0, 0);
+       }
+       to {
+         opacity: 1;
+         transform: none;
+       }
+    }
+    
+.login{
+	margin-top: 25px;
+	padding: 65px;
+	max-width: 100%;
+	background-image: url("fundo_cad.jpg");
+	background-color: black;
+	animation-name: example;
+    animation-duration: 4s;
+}
+
+
+
+.login p{
+	color: white;
+	font-weight: bold;
+	margin-top: 16px;
+	font-family: 'Arial';
+	font-size: 17px;
+}
+
+.login button{
+	position: center;
+	background-color: yellow;
+	border: 3px solid orange;
+	font-weight: bold;
+	margin-top: 20px;
+	font-size:17px;
+	padding: 3px;
+}
+
+.login button:hover{
+	border-color: white;
+	
+}
+
+.estatistics{
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 10px;
+	background-color: #7070db;
+	padding: 15px;
+	max-width: 100%;
+	animation-name: example2;
+    animation-duration: 4s;
+
+}
+.estatistics p{
+	animation-name: example2;
+    animation-duration: 4s;
+	font-family: 'Arial';
+	font-size: 22px;
+	color: white;
+}
